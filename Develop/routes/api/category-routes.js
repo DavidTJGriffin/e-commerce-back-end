@@ -26,8 +26,9 @@ router.get('/:id', (req, res) => {
     include: [{
       model: Product,
       attributes: ['id', 'product_name', 'price', 'stock']
-    }].then(data => res.json(data))
-  })
+    }]
+  }).then(data => res.json(data))
+  
 });
 
 router.post('/', (req, res) => {
